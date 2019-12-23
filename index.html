@@ -10,9 +10,37 @@ https://opensource.org/licenses/mit-license.php
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="style.css">
-        <!--<link rel="icon" href="favicon.ico">
-        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">-->
     </head>
     <body>
+        <div id="home">
+            <div>
+                <h1>レベル上げ行為</h1>
+                <span><a href="javascript:void(0)" onclick="main()">スタート</a></span><br>
+                <span><a href="javascript:void(0)" onclick="help()">遊び方</a></span>
+            </div>
+        </div>
+        <div id="main">
+            <div>
+                <span id="time_label"></span><br>
+                <span>レベル: <span id="level"></span></span><br>
+                <span>レベルアップ回数: <span id="level_up_count"></span></span><br>
+                <span>スコア: <span id="score"></span></span><br>
+                <div id="result"><a id="share" target="_blank">Twitterで共有</a> <span>コピペ用↓</span><br>
+                <textarea id="result_main"></textarea><br>
+                <span><a href="javascript:void(0)" onclick="home()">戻る</a></span></div>
+            </div>
+        </div>
+        <div id="help">
+            <div>
+                <h1>レベル上げ行為 とは</h1>
+                <span>1分間に獲得できるスコアを競うゲームです</span><br>
+                <span>スコアは勝手に増えます</span><br>
+                <span>クリック/タップするとレベルが上がります</span><br>
+                <span>レベルを上げるとスコアが増えやすくなります</span><br>
+                <span>レベルを上げた直後はスコアが増えづらいです</span><br>
+                <span><a href="javascript:void(0)" onclick="home()">戻る</a></span>
+            </div>
+        </div>
+        <script src="main.js"></script>
     </body>
 </html>
