@@ -43,8 +43,8 @@ const main = () => {
         const format = (x, cut) => {
             const str = String(Math.round(x * 10 ** cut)); // str :: String
             const head = str.length - cut; // head :: NaturalNumber
-            if(head === 0) {
-                return '0.' + str;
+            if(head <= 0) {
+                return '0.' + '0'.repeat(-head) + str;
             }
             return str.slice(0, head) + '.' + str.slice(head);
         };
@@ -72,9 +72,8 @@ const main = () => {
                 const score = dgebi('score').innerText; // score :: String
                 // result :: String
                 const result = `${levelUpCount}回レベルアップして${score}点獲得しました！`;
-                const uri = encodeURI(result); // uri :: String
                 // url :: String
-                const url = `https://twitter.com/intent/tweet?hashtags=%E3%83%AC%E3%83%99%E3%83%AB%E4%B8%8A%E3%81%92%E8%A1%8C%E7%82%BA&amp;original_referer=https%3A%2F%2Fpublish.twitter.com%2F%3FbuttonHashtag%3D%25E3%2583%25AC%25E3%2583%2599%25E3%2583%25AB%25E4%25B8%258A%25E3%2581%2592%25E8%25A1%258C%25E7%2582%25BA%26buttonText%3D${uri}%26buttonType%3DTweetButton%26buttonUrl%3Dhttps%253A%252F%252Ftakisai.github.io%252Fearnexp%252F%26widget%3DButton&amp;ref_src=twsrc%5Etfw&amp;text=${uri}&amp;tw_p=tweetbutton&amp;url=https%3A%2F%2Ftakisai.github.io%2Fearnexp%2F`;
+                const url = `https://twitter.com/intent/tweet?text=${encodeURI(result)}%20%23%E3%83%AC%E3%83%99%E3%83%AB%E4%B8%8A%E3%81%92%E8%A1%8C%E7%82%BA%20https%3A%2F%2Ftakisai.github.io%2Fearnexp%2F`;
                 dgebi('share').setAttribute('href', url);
                 // textarea :: String
                 const textarea = result + ' https://takisai.github.io/earnexp/ #レベル上げ行為';
