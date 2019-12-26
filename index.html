@@ -15,8 +15,17 @@ https://opensource.org/licenses/mit-license.php
         <div id="home">
             <div>
                 <h1>レベル上げ行為</h1>
-                <span><a href="javascript:void(0)" onclick="main()">スタート</a></span><br>
+                <span><a href="javascript:void(0)" onclick="menu()">スタート</a></span><br>
                 <span><a href="javascript:void(0)" onclick="help()">遊び方</a></span>
+            </div>
+        </div>
+        <div id="menu">
+            <div>
+                <h1 id="menu_h1" onclick="secret.do()">プレイモードを選択</h1>
+                <a id="mode_1" href="javascript:void(0)">1分</a><br>
+                <a id="mode_2" href="javascript:void(0)">2分</a><br>
+                <a id="mode_5" href="javascript:void(0)">5分</a><br>
+                <a id="mode_10" href="javascript:void(0)">10分</a>
             </div>
         </div>
         <div id="main">
@@ -24,7 +33,7 @@ https://opensource.org/licenses/mit-license.php
                 <span id="time_label"></span><br>
                 <span>レベル: <span id="level"></span></span><br>
                 <span>レベルアップ回数: <span id="level_up_count"></span></span><br>
-                <span>スコア: <span id="score"></span></span><br>
+                <span>スコア: <span id="score"></span><span id="secret_score"></span></span><br>
                 <div id="result"><a id="share" target="_blank">Twitterで共有</a> <span>コピペ用↓</span><br>
                 <textarea id="result_main"></textarea><br>
                 <span><a href="javascript:void(0)" onclick="home()">戻る</a></span></div>
@@ -35,7 +44,7 @@ https://opensource.org/licenses/mit-license.php
                 <h1>レベル上げ行為 とは</h1>
                 <span>1分間に獲得できるスコアを競うゲームです</span><br>
                 <span>スコアは勝手に増えます</span><br>
-                <span>クリック/タップするとレベルが上がります</span><br>
+                <span>画面をクリック/タップでレベルが上がります</span><br>
                 <span>レベルを上げるとスコアが増えやすくなります</span><br>
                 <span>レベルを上げた直後はスコアが増えづらいです</span><br>
                 <span><a href="javascript:void(0)" onclick="home()">戻る</a></span>
