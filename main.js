@@ -137,7 +137,7 @@ const main = (mode, isSecret = false) => {
                 const url = `https://twitter.com/intent/tweet?text=${encodeURI(result)}%20%23%E3%83%AC%E3%83%99%E3%83%AB%E4%B8%8A%E3%81%92%E8%A1%8C%E7%82%BA%20https%3A%2F%2Ftakisai.github.io%2Fearnexp%2F`;
                 dgebi('share').setAttribute('href', url);
                 // textarea :: String
-                const textarea = result + ' https://takisai.github.io/earnexp/ #レベル上げ行為';
+                const textarea = result + ' #レベル上げ行為 https://takisai.github.io/earnexp/';
                 dgebi('result_main').value = textarea;
                 dgebi('result').style.visibility = 'visible';
             }
